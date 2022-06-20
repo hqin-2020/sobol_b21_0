@@ -9,9 +9,8 @@
 #SBATCH --ntasks-per-node=28
 #SBATCH --mem-per-cpu=2000
 #SBATCH --constraint=fdr
-#SBATCH --array=1-100
 
 # Load Python modules
 module load python/anaconda-2020.02
 
-python para_$SLURM_ARRAY_TASK_ID.py 
+python para_lowtol.py 
